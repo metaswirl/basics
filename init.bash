@@ -18,10 +18,10 @@ for el in $(ls $DIR | grep -v "init.bash\|Readme"); do
     elif [ -e $HOME/.$el ]; then
         echo -e "You have an existing version of $el.\nDo you want to overwrite it? (y/n)"
         read CHOICE
-        if [ ${CHOICE[1]} = 'y' || ${CHOICE[1]} ='Y' ]; then
+        if [[ ${CHOICE[1]} = 'y' || ${CHOICE[1]} ='Y' ]]; then
             echo "overwriting existing version of $el" 
             rm $HOME/.$el
-            ln -s $DIR/.$el $HOME/$el
+            ln -s $DIR/$el $HOME/.$el
         fi
 	else
         echo "making symbolic link for $el"
