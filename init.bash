@@ -8,6 +8,7 @@ if [ ! -e $DIR/$OWN_NAME ]; then
 OR add the path to the directory as a parameter"
     exit 1
 fi
+
 echo "start of script in $DIR" 
 
 for el in $(ls $DIR | grep -v "init.bash\|Readme"); do
@@ -28,5 +29,10 @@ for el in $(ls $DIR | grep -v "init.bash\|Readme"); do
         ln -s $DIR/$el $HOME/.$el
     fi
 done
+
+echo "installing ssh key if necessary"
+KEY="$DIR/.ssh/id_dsa.pub"
+AUTH_KEYS="$HOME/.ssh/authorized_keys"
+grep -q -f $KEY $AUTH_KEYS || cat $KEY >> $AUTH_KEYS
 
 echo "end of script"
