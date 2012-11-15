@@ -20,7 +20,7 @@ for el in $(ls $DIR | grep -v "init.bash\|Readme"); do
         read CHOICE
         if [ "${CHOICE[1]}"="y" ] || [ "${CHOICE[1]}"="Y" ]; then
             echo "overwriting existing version of $el" 
-            rm $HOME/.$el
+            rm -Rf $HOME/.$el
             ln -s $DIR/$el $HOME/.$el
         fi
 	else
