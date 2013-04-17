@@ -1,2 +1,6 @@
-1. configure zshrc to be more flexible
-2. understand and edit bashrc
+1. understand and edit bashrc
+2. install custom software if debian:
+- tree
+- tmux
+- vim
+- zsh

@@ -22,6 +22,7 @@ nmap <C-t> :TlistToggle<CR>
 filetype on
 filetype plugin on
 syntax on
+set ofu=syntaxcomplete#Complete
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as   set filetype=actionscript
 au BufNewFile,BufRead *.pl   set filetype=prolog
@@ -86,4 +87,8 @@ imap <Up> <NOP>
 set hls
 
 " enable mouse
-set mouse=a
+" set mouse=a
+
+augroup filetypedetect
+    au! BufRead,BufNewFile *nc setfiletype nc
+augroup END

@@ -22,6 +22,9 @@ compinit
 # End of lines added by compinstall
 export PYTHONSTARTUP=~/.pythonrc
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+alias -s tex=vim
+alias -s pl=vim
+alias -s txt=vim
 
 if [ -e ~/.zshrc_local ]; then
     source ~/.zshrc_local
