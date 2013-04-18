@@ -45,8 +45,8 @@ set foldmethod=marker
 " color
 set t_Co=256
 " colorscheme ir_black
-" colorscheme softlight 
-colorscheme crt
+colorscheme softlight 
+" colorscheme crt
 " colorscheme desert
 " colorscheme wombat
 
